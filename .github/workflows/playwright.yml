@@ -5,14 +5,18 @@ on: [push, pull_request]
 jobs:
   api-tests:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-    - run: npm ci
-    - run: npx playwright install --with-deps
-    - run: npm run test:api
+    # Just fo this case, ideally env variables should be handles more securely.
+    env:
+      API_BASE_URL: https://restful-booker.herokuapp.com
+      E2E_BASE_URL: https://parabank.parasoft.com/parabank/index.htm
 
-  #bdd-tests:
-   
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npm run test:api
