@@ -1,0 +1,31 @@
+{
+  "name": "automation-qa-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "cucumber-js --require-module ts-node/register --require features/**/*.ts features/**/*.feature",
+    "test:api": "npx playwright test tests/api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoginovVl/automation-qa-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LoginovVl/automation-qa-task/issues"
+  },
+  "homepage": "https://github.com/LoginovVl/automation-qa-task#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/test": "^1.54.1",
+    "dotenv": "^17.2.1",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
