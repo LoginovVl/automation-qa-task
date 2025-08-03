@@ -13,6 +13,7 @@ test.describe('Auth API - /auth', () => {
   test('Check successfull authenticate with valid credentials', async () => {
     const response = await apiClient.post('/auth', {
       data: {
+        //Ideally shoild be stored separatly
         username: 'admin',
         password: 'password123'
       }

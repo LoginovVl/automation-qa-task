@@ -318,7 +318,8 @@ dotenv.config();
   });
 
 
-  ///IDEALLY WE MIGHT NEED TO TEST all the expected response statuses and schema, data types and format validation,
+  ///IDEALLY WE MIGHT NEED TO TEST some more the expected response statuses and schema, data types and format validation,
   // booking logic validation(like checkin < checkout), fields limits, boundary conditions and so on
+  // again based on teams test pyramid test coverage picture.
 });
 
